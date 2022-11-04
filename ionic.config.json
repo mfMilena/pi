@@ -1,0 +1,7 @@
+{
+  "name": "myAppSidemenu",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

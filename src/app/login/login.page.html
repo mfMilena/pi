@@ -1,0 +1,76 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inline Modal</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-button id="open-modal" expand="block">Open</ion-button>
+  <p>{{ message }}</p>
+  <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button (click)="cancel()">Cancel</ion-button>
+          </ion-buttons>
+          <ion-title>Welcome</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-item>
+          <ion-label position="stacked">Enter your name</ion-label>
+          <ion-input type="text" placeholder="Your name" [(ngModel)]="name"></ion-input>
+        </ion-item>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>
+
+<ion-content>
+<h1>Cadastro</h1>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Nome</ion-label>
+      <ion-input placeholder="Nome completo"></ion-input>
+    </ion-item>
+
+
+    <ion-list>
+      <ion-item>
+        <ion-select placeholder="Idade">
+          <ion-select-option value="de 13 a 18 anos">de 13 a 18 anos</ion-select-option>
+          <ion-select-option value="de 19 a 25 anos">de 19 a 25 anos</ion-select-option>
+          <ion-select-option value="26 mais">26 mais</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-select placeholder="Moram em sua residência">
+          <ion-select-option value="de 2 a 3 pessoas">de 2 a 3 pessoas</ion-select-option>
+          <ion-select-option value="de 4 a 5 pessoas">de 4 a 5 pessoas</ion-select-option>
+          <ion-select-option value="5 mais">5 mais</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-item>
+      <ion-label>Cidade/Uf</ion-label>
+      <ion-input type="Cidade/Uf" placeholder="Cidade/Uf"></ion-input>
+    </ion-item>
+    <ion-button color="dark">Dark</ion-button>
+    <ion-button shape="round">cadastrar</ion-button>
+
+
+
+<ion-icon slot="name" star ></ion-icon>
+  </ion-list>
+</ion-content>
+
+
